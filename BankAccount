@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bank
+{
+
+    class BankTest
+    {
+        static void Main(string[] args)
+        {
+
+            Customer y = new Customer("Tan Ah Kow", "20, Seaside Road", "XXX20", "20");
+            Customer z = new Customer("Kim Lee Keng", "2, Rich View", "XXX9F", "20");
+            Account a = new Account("001-001-002", y, 2000);
+            Account b = new Account("001-001-002", z, 5000);
+            Console.WriteLine(a.show());
+            Console.WriteLine(b.show());
+            a.Deposit(100);
+            Console.WriteLine(a.show());
+            a.Withdraw(200);
+            Console.WriteLine(a.show());
+            a.TransferTo(400, b);
+            Console.WriteLine(a.show());
+            Console.WriteLine(b.show());
+
+        }
+    }
+    
+}
