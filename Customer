@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bank
+{
+    class Customer
+    {
+        string name;
+        string address;
+        string passportNumber;
+        string dateOfBirth;
+
+        public Customer(string a, string b, string c, string d)
+        {
+            name = a;
+            address = b;
+            passportNumber = c;
+            dateOfBirth = d;
+        }
+
+        public string GetCustomer
+        {
+            get {
+                string d = name +"," +address+ "," + passportNumber+"," + dateOfBirth;
+                return d;
+            }
+        }
+
+       public string GetName
+        {
+            get {
+                string n = name;
+                return name;
+            }
+
+        }
+
+            
+
+
+
+
+
+
+
+    }
+}
