@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bank
+{
+    class Account
+    {
+        //Attributes
+        private string accountName;
+        private Customer holderName;
+        private double balance;
+
+        //Constructor
+        public Account(string a, Customer b, double c)
+        {
+            accountName = a;
+            holderName = b;
+            balance = c;
+        }
+
+        public string show()
+        {            
+            string d;
+            d = accountName + "\t" + holderName.GetName + "\t" + balance;
+            return d;
+        }
+ 
+        public void Deposit(double x)
+        {
+            this.balance += x;
+
+        }
+
+        public void Withdraw(double x)
+        {
+            if (balance < x)
+            {
+                Console.WriteLine("You do not have enough money");
+            }
+            else
+            {
+                this.balance = this.balance - x;
+
+            }
+        }
+
+        public void TransferTo(double a, Account b)
+        {
+            if (balance < a)
+            {
+                Console.WriteLine("Failed, you do not have enough money!");
+            }
+            else
+            {
+                this.balance = this.balance - a;
+                b.balance = b.balance + a;
+            }
+        }
+
+    }
+}
