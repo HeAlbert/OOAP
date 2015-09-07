@@ -18,7 +18,7 @@ namespace ConsoleApplication1
             Investments.ListInvestments();
 
             Console.WriteLine(Investments.TotalValue());
-            
+            Console.WriteLine(Investments.TotalProfits());
         }
     }
 }
